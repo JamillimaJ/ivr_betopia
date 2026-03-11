@@ -1,0 +1,10 @@
+Django==4.2.9
+djangorestframework==3.14.0
+django-cors-headers==4.3.1
+requests==2.31.0
+python-dotenv==1.0.0
+
+# RAG / vector search
+sentence-transformers>=2.7.0
+faiss-cpu>=1.7.4
+numpy>=1.24.0

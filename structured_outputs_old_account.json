@@ -1,0 +1,37 @@
+{
+  "account_name": "Old Vapi Account",
+  "api_key": "8832b4f6-9c38-4eb4-bc0f-cdb7d23b0d9a",
+  "assistant_id": "8ec97164-78fb-4749-9111-1c654578df49",
+  "structured_outputs": [
+    {
+      "field_name": "service_interest",
+      "id": "1a2c86d0-6015-45bc-88c4-c639711c27b1",
+      "name": "Service Interest"
+    },
+    {
+      "field_name": "motivation",
+      "id": "2e91c345-6ad0-4ef1-be11-fb3fbb7ee86c",
+      "name": "Motivation"
+    },
+    {
+      "field_name": "urgency",
+      "id": "e747d7b7-e353-4fe8-958f-88bed764cad4",
+      "name": "Urgency"
+    },
+    {
+      "field_name": "budget",
+      "id": "d0dcf3ec-12ff-45c9-bf3c-2afbbcd8eca1",
+      "name": "Budget"
+    },
+    {
+      "field_name": "past_experience",
+      "id": "a042da8e-9713-41fb-b433-3a14f94ff5e7",
+      "name": "Past Experience"
+    },
+    {
+      "field_name": "intent",
+      "id": "da13224d-bd69-4efb-adfd-26e0ce5fec81",
+      "name": "Intent"
+    }
+  ]
+}

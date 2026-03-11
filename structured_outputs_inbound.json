@@ -1,0 +1,62 @@
+{
+  "account_name": "Inbound Agent (Chris_inbound)",
+  "api_key": "8832b4f6-9c38-4eb4-bc0f-cdb7d23b0d9a",
+  "assistant_id": "40855726-e602-42e3-aab3-48152b527f03",
+  "structured_outputs": [
+    {
+      "field_name": "service_interest",
+      "id": "1a2c86d0-6015-45bc-88c4-c639711c27b1",
+      "name": "Service Interest"
+    },
+    {
+      "field_name": "motivation",
+      "id": "2e91c345-6ad0-4ef1-be11-fb3fbb7ee86c",
+      "name": "Motivation"
+    },
+    {
+      "field_name": "urgency",
+      "id": "e747d7b7-e353-4fe8-958f-88bed764cad4",
+      "name": "Urgency"
+    },
+    {
+      "field_name": "budget",
+      "id": "d0dcf3ec-12ff-45c9-bf3c-2afbbcd8eca1",
+      "name": "Budget"
+    },
+    {
+      "field_name": "past_experience",
+      "id": "a042da8e-9713-41fb-b433-3a14f94ff5e7",
+      "name": "Past Experience"
+    },
+    {
+      "field_name": "intent",
+      "id": "da13224d-bd69-4efb-adfd-26e0ce5fec81",
+      "name": "Intent"
+    },
+    {
+      "field_name": "caller_name",
+      "id": "5074d602-60cf-4489-8092-581104d31b69",
+      "name": "Caller Name"
+    },
+    {
+      "field_name": "caller_email",
+      "id": "0bbafe5c-6277-4d9f-9b51-53c33752cc70",
+      "name": "Caller Email"
+    },
+    {
+      "field_name": "caller_company",
+      "id": "de5a6558-7a9f-41c5-af0c-3b36586be5cb",
+      "name": "Caller Company"
+    },
+    {
+      "field_name": "caller_role",
+      "id": "32a7ff74-50fc-4a75-b8c2-0ddcee59bd27",
+      "name": "Caller Role"
+    },
+    {
+      "field_name": "caller_company_size",
+      "id": "92b16518-cc40-4032-b69f-6bb6e99924c9",
+      "name": "Caller Company Size"
+    }
+  ]
+}

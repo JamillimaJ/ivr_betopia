@@ -1,0 +1,48 @@
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Python virtual environment
+venv/
+env/
+.venv/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+
+# Django
+*.sqlite3
+*.log
+local_settings.py
+
+# Frontend dependencies
+frontend/node_modules/
+node_modules/
+frontend/dist/
+dist/
+
+# Build artifacts
+*.egg-info/
+.eggs/
+build/
+*.egg
+
+# Logs and PIDs
+logs/*.pid
+logs/*.log
+*.pid
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo

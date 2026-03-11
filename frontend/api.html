@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lead Qualifier - API Documentation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 py-8">
+        <h1 class="text-3xl font-bold text-gray-800 mb-6">Lead Qualifier API Documentation</h1>
+        
+        <div class="bg-white rounded-lg shadow p-6 mb-6">
+            <h2 class="text-xl font-semibold mb-4">Base URL</h2>
+            <code class="bg-gray-100 px-4 py-2 rounded" id="base-url">Loading...</code>
+        </div>
+        
+        <script>
+            // Dynamically set the base URL based on current host
+            document.getElementById('base-url').textContent = `http://${window.location.hostname}:8001/api`;
+        </script>
+
+        <!-- QA Leads -->
+        <div class="bg-white rounded-lg shadow p-6 mb-6">
+            <h2 class="text-2xl font-semibold mb-4">QA Leads</h2>
+            
+            <div class="mb-6">
+                <h3 class="text-lg font-semibold mb-2">List QA Leads</h3>
+                <div class="bg-gray-100 p-4 rounded">
+                    <p><strong>GET</strong> /qa-leads/</p>
+                    <p class="text-sm text-gray-600 mt-2">Returns paginated list of QA leads</p>
+                </div>
+            </div>
+
+            <div class="mb-6">
+                <h3 class="text-lg font-semibold mb-2">Create QA Lead</h3>
+                <div class="bg-gray-100 p-4 rounded">
+                    <p><strong>POST</strong> /qa-leads/</p>
+                    <p class="text-sm text-gray-600 mt-2">Body:</p>
+                    <pre class="text-xs mt-2 bg-gray-800 text-white p-2 rounded overflow-x-auto">{
+  "name": "John Doe",
+  "phone_number": "01712345678",
+  "email": "john@example.com",
+  "company_name": "ABC Corp",
+  "role": "Manager",
+  "request": "Need AI services",
+  "company_size": "11-50",
+  "submitted_at": "2026-03-04T12:00:00Z",
+  "form_mode": "test"
+}</pre>
+                </div>
+            </div>
+
+            <div class="mb-6">
+                <h3 class="text-lg font-semibold mb-2">Migrate to Production</h3>
+                <div class="bg-gray-100 p-4 rounded">
+                    <p><strong>POST</strong> /qa-leads/migrate_to_production/</p>
+                    <p class="text-sm text-gray-600 mt-2">Body:</p>
+                    <pre class="text-xs mt-2 bg-gray-800 text-white p-2 rounded overflow-x-auto">{
+  "qa_lead_ids": [1, 2, 3]
+}</pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- Production Leads -->
+        <div class="bg-white rounded-lg shadow p-6 mb-6">
+            <h2 class="text-2xl font-semibold mb-4">Production Leads</h2>
+            
+            <div class="mb-6">
+                <h3 class="text-lg font-semibold mb-2">List Production Leads</h3>
+                <div class="bg-gray-100 p-4 rounded">
+                    <p><strong>GET</strong> /production-leads/</p>
+                    <p class="text-sm text-gray-600 mt-2">Returns paginated list of production leads</p>
+                </div>
+            </div>
+
+            <div class="mb-6">
+                <h3 class="text-lg font-semibold mb-2">Check Call Status</h3>
+                <div class="bg-gray-100 p-4 rounded">
+                    <p><strong>POST</strong> /production-leads/{id}/check_call_status/</p>
+                    <p class="text-sm text-gray-600 mt-2">Checks VAPI call status and creates post-call summary if completed</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Post-Call Summaries -->
+        <div class="bg-white rounded-lg shadow p-6 mb-6">
+            <h2 class="text-2xl font-semibold mb-4">Post-Call Summaries</h2>
+            
+            <div class="mb-6">
+                <h3 class="text-lg font-semibold mb-2">List Summaries</h3>
+                <div class="bg-gray-100 p-4 rounded">
+                    <p><strong>GET</strong> /post-call-summaries/</p>
+                    <p class="text-sm text-gray-600 mt-2">Optional query parameter: ?status=complete</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
