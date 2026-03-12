@@ -96,8 +96,8 @@ class PostCallSummary(models.Model):
     service_interest = models.TextField(blank=True, null=True)
     motivation = models.TextField(blank=True, null=True)
     urgency = models.TextField(blank=True, null=True)
-    past_experience = models.TextField(blank=True, null=True)
-    budget = models.TextField(blank=True, null=True)
+    conversation_summary = models.TextField(blank=True, null=True)
+    follow_up_email = models.TextField(blank=True, null=True)
     intent = models.CharField(max_length=50, blank=True, null=True)
     status = models.CharField(max_length=20, choices=STATUS_CHOICES, default='complete')
     

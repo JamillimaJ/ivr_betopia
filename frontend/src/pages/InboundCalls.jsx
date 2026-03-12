@@ -366,12 +366,12 @@ const InboundCalls = () => {
                     <p className="text-sm text-betopia-gray">{selectedCall.urgency || 'N/A'}</p>
                   </div>
                   <div>
-                    <p className="text-sm font-semibold text-betopia-navy mb-1">Past Experience</p>
-                    <p className="text-sm text-betopia-gray">{selectedCall.past_experience || 'N/A'}</p>
+                    <p className="text-sm font-semibold text-betopia-navy mb-1">Follow Up Email</p>
+                    <p className="text-sm text-betopia-gray">{selectedCall.follow_up_email ? 'Generated ✔' : 'N/A'}</p>
                   </div>
                   <div>
-                    <p className="text-sm font-semibold text-betopia-navy mb-1">Budget</p>
-                    <p className="text-sm text-betopia-gray">{selectedCall.budget || 'N/A'}</p>
+                    <p className="text-sm font-semibold text-betopia-navy mb-1">Conversation Summary</p>
+                    <p className="text-sm text-betopia-gray">{selectedCall.conversation_summary ? 'Available ✔' : 'N/A'}</p>
                   </div>
                   <div>
                     <p className="text-sm font-semibold text-betopia-navy mb-1">Intent</p>
@@ -388,6 +388,32 @@ const InboundCalls = () => {
                     Original Request
                   </h4>
                   <p className="text-sm text-betopia-gray whitespace-pre-wrap">{selectedCall.request}</p>
+                </div>
+              )}
+
+              {/* AI Conversation Summary */}
+              {selectedCall.conversation_summary && selectedCall.conversation_summary !== 'N/A' && (
+                <div className="bg-blue-50 rounded-xl p-6">
+                  <h4 className="font-serif font-semibold text-lg text-betopia-navy mb-4 flex items-center">
+                    <i className="fas fa-brain mr-2 text-betopia-orange"></i>
+                    AI Conversation Summary
+                  </h4>
+                  <div className="text-sm text-betopia-gray whitespace-pre-wrap bg-white p-4 rounded-lg border border-gray-200">
+                    {selectedCall.conversation_summary}
+                  </div>
+                </div>
+              )}
+
+              {/* Follow Up Email */}
+              {selectedCall.follow_up_email && selectedCall.follow_up_email !== 'N/A' && (
+                <div className="bg-green-50 rounded-xl p-6">
+                  <h4 className="font-serif font-semibold text-lg text-betopia-navy mb-4 flex items-center">
+                    <i className="fas fa-envelope mr-2 text-betopia-orange"></i>
+                    Follow Up Email
+                  </h4>
+                  <div className="text-sm text-betopia-gray whitespace-pre-wrap bg-white p-4 rounded-lg border border-gray-200 max-h-72 overflow-y-auto">
+                    {selectedCall.follow_up_email}
+                  </div>
                 </div>
               )}
 

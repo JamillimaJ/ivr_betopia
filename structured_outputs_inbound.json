@@ -19,14 +19,14 @@
       "name": "Urgency"
     },
     {
-      "field_name": "budget",
+      "field_name": "conversation_summary",
       "id": "d0dcf3ec-12ff-45c9-bf3c-2afbbcd8eca1",
-      "name": "Budget"
+      "name": "Conversation Summary"
     },
     {
-      "field_name": "past_experience",
+      "field_name": "follow_up_email",
       "id": "a042da8e-9713-41fb-b433-3a14f94ff5e7",
-      "name": "Past Experience"
+      "name": "Follow Up Email"
     },
     {
       "field_name": "intent",

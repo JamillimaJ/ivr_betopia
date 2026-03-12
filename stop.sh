@@ -17,7 +17,7 @@ if [ -f "logs/backend.pid" ]; then
 fi
 
 # Fallback: kill any stray manage.py runserver processes
-STRAY_PIDS=$(pgrep -f "manage.py runserver 0.0.0.0:8001" 2>/dev/null)
+STRAY_PIDS=$(pgrep -f "manage.py runserver 0.0.0.0:5869" 2>/dev/null)
 if [ -n "$STRAY_PIDS" ]; then
     echo "🔴 Stopping stray backend process(es): $STRAY_PIDS"
     kill $STRAY_PIDS 2>/dev/null

@@ -10,7 +10,7 @@ if [ -f "logs/backend.pid" ]; then
     BACKEND_PID=$(cat logs/backend.pid)
     if ps -p $BACKEND_PID > /dev/null 2>&1; then
         echo "✅ Backend:  Running (PID: $BACKEND_PID)"
-        echo "   URL:      http://0.0.0.0.:8001"
+        echo "   URL:      http://0.0.0.0.:5869"
     else
         echo "❌ Backend:  Not running (stale PID file)"
     fi
@@ -25,7 +25,7 @@ if [ -f "logs/frontend.pid" ]; then
     FRONTEND_PID=$(cat logs/frontend.pid)
     if ps -p $FRONTEND_PID > /dev/null 2>&1; then
         echo "✅ Frontend: Running (PID: $FRONTEND_PID)"
-        echo "   URL:      http://0.0.0.0.:8000"
+        echo "   URL:      http://0.0.0.0.:5569"
     else
         echo "❌ Frontend: Not running (stale PID file)"
     fi

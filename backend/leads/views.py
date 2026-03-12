@@ -230,8 +230,8 @@ class ProductionLeadViewSet(viewsets.ModelViewSet):
         service_interest = extract_output('service_interest', loader.get_id('service_interest'))
         motivation = extract_output('motivation', loader.get_id('motivation'))
         urgency = extract_output('urgency', loader.get_id('urgency'))
-        past_experience = extract_output('past_experience', loader.get_id('past_experience'))
-        budget = extract_output('budget', loader.get_id('budget'))
+        conversation_summary = extract_output('conversation_summary', loader.get_id('conversation_summary'))
+        follow_up_email = extract_output('follow_up_email', loader.get_id('follow_up_email'))
         intent = extract_output('intent', loader.get_id('intent'))
         
         # Get conversation transcript
@@ -251,8 +251,8 @@ class ProductionLeadViewSet(viewsets.ModelViewSet):
                 'service_interest': service_interest,
                 'motivation': motivation,
                 'urgency': urgency,
-                'past_experience': past_experience,
-                'budget': budget,
+                'conversation_summary': conversation_summary,
+                'follow_up_email': follow_up_email,
                 'intent': intent,
                 'status': call_status,
                 'call_type': lead.call_type or 'outbound',
@@ -411,15 +411,13 @@ def vapi_webhook(request):
             'urgency',
             loader.get_id('urgency')
         )
-        past_experience = extract_output(
-            'past_experience',
-            loader.get_id('past_experience'),
-            'past-experience',
-            'pastExperience'
+        conversation_summary = extract_output(
+            'conversation_summary',
+            loader.get_id('conversation_summary')
         )
-        budget = extract_output(
-            'budget',
-            loader.get_id('budget')
+        follow_up_email = extract_output(
+            'follow_up_email',
+            loader.get_id('follow_up_email')
         )
         intent = extract_output(
             'intent',
@@ -463,8 +461,8 @@ def vapi_webhook(request):
                 'service_interest': service_interest,
                 'motivation': motivation,
                 'urgency': urgency,
-                'past_experience': past_experience,
-                'budget': budget,
+                'conversation_summary': conversation_summary,
+                'follow_up_email': follow_up_email,
                 'intent': intent,
                 'status': call_status,
                 'call_type': call_type,
@@ -569,8 +567,8 @@ def sync_inbound_calls(request):
             service_interest = extract_output('service_interest', loader.get_id('service_interest'))
             motivation = extract_output('motivation', loader.get_id('motivation'))
             urgency = extract_output('urgency', loader.get_id('urgency'))
-            past_experience = extract_output('past_experience', loader.get_id('past_experience'))
-            budget = extract_output('budget', loader.get_id('budget'))
+            conversation_summary = extract_output('conversation_summary', loader.get_id('conversation_summary'))
+            follow_up_email = extract_output('follow_up_email', loader.get_id('follow_up_email'))
             intent = extract_output('intent', loader.get_id('intent'))
 
             # Try to extract caller identity from structured outputs (if configured)
@@ -604,8 +602,8 @@ def sync_inbound_calls(request):
                     'service_interest': service_interest,
                     'motivation': motivation,
                     'urgency': urgency,
-                    'past_experience': past_experience,
-                    'budget': budget,
+                    'conversation_summary': conversation_summary,
+                    'follow_up_email': follow_up_email,
                     'intent': intent,
                     'status': summary_status,
                     'call_type': 'inbound',

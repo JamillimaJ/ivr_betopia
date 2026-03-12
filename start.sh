@@ -18,7 +18,7 @@ mkdir -p logs
 # Start Django backend
 echo "🔥 Starting Django backend server..."
 cd backend
-nohup python manage.py runserver 0.0.0.0:8001 > ../logs/backend.log 2>&1 &
+nohup python manage.py runserver 0.0.0.0:5869 > ../logs/backend.log 2>&1 &
 BACKEND_PID=$!
 cd ..
 
@@ -26,7 +26,7 @@ cd ..
 echo $BACKEND_PID > logs/backend.pid
 sleep 1
 
-echo "✅ Backend started on http://0.0.0.0.:8001"
+echo "✅ Backend started on http://0.0.0.0.:5869"
 echo "   PID: $BACKEND_PID"
 echo ""
 
@@ -48,7 +48,7 @@ cd ..
 echo $FRONTEND_PID > logs/frontend.pid
 sleep 2
 
-echo "✅ Frontend started on http://0.0.0.0:8000"
+echo "✅ Frontend started on http://0.0.0.0:5569"
 echo "   PID: $FRONTEND_PID"
 echo ""
 
@@ -57,9 +57,9 @@ echo "🎉 System is running!"
 echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 echo ""
 echo "📝 Access Points:"
-echo "   • Dashboard:    http://127.0.0.1:8000"
-echo "   • Login:        http://127.0.0.1:8000/login"
-echo "   • Backend API:  http://127.0.0.1:8001/api"
+echo "   • Dashboard:    http://127.0.0.1:5569"
+echo "   • Login:        http://127.0.0.1:5569/login"
+echo "   • Backend API:  http://127.0.0.1:5869/api"
 echo ""
 echo "🔐 Login Credentials:"
 echo "   Username: admin"
